@@ -26,6 +26,7 @@ h4 {
 }
 
 .jumbotron {
+    background-image: url("kgh-1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

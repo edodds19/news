@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google Fonts -->
+    <!-- Swap out "Roboto" for the font(s) you want to use -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <!-- Your own CSS -->
+    <link rel="stylesheet" href="/styles.css">
+
+    
+    <title>News</title>
+  </head>
+  <body>
+
+    <div class="container mt-5">
+      <h1>THE Weather & News Site</h1>
+      </br>
+      <h2>The Weather Part</h2>
+      </br>
+      <h3>
+        <b>Location</b>: <%= @location  %> 
+      </h3> 
+      </br> 
+      <h4>   
+       <b>Right now</b>: It is currently <%= @current_temp %> degrees. The weather is <%= @current_description %>.
+      </br>
+      </br>
+       <b>Today (Day 0)</b>: Our team of scientists has assessed that you will experince a high of <%= @today_high %> degrees with a low of <%= @today_low %> degrees and that the defining weather of the day will be <%= @today_description %>. 
+      </br>
+      </br>
+       <b>Tomorrow (Day 1)</b>: Our wizards and their crystal balls predict that you will experince a high of <%= @tomorrow_high %> degrees with a low of <%= @tomorrow_low %> degrees and that the defining weather of the day will be <%= @tomorrow_description %>.
+      </h4>   
+    </div>
+
+    <div class="container mt-5">
+    <h4>
+    <b>Here it is, a five-day forecast:</b>  
+    </h4>
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Day 0</th>
+                <th scope="col">Day 1</th>
+                <th scope="col">Day 2</th>
+                <th scope="col">Day 3</th>
+                <th scope="col">Day 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">High (F)</th>
+                <td><%= @today_high %></td>
+                <td><%= @tomorrow_high %></td>
+                <td><%= @day2_high %></td>
+                <td><%= @day3_high %></td>
+                <td><%= @day4_high %></td>
+            </tr>
+            <tr>
+                <th scope="row">Low (F)</th>
+                <td><%= @today_low %></td>
+                <td><%= @tomorrow_low %></td>
+                <td><%= @day2_low %></td>
+                <td><%= @day3_low %></td>
+                <td><%= @day3_low %></td>
+            </tr>
+            <tr>
+                <th scope="row">Conditions</th>
+                <td><%= @today_description %></td>
+                <td><%= @tomorrow_description %></td>
+                <td><%= @day2_description %></td>
+                <td><%= @day3_description %></td>
+                <td><%= @day4_description %></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <div class="container mt-5">
+    <h2>The News Part</h2>
+    </br>
+    <h3>The five stories you <i>need</i> to know about...</h3>
+    </br>
+    <h4>
+        <a href="<%= @url0 %>" title=""><%= @title0%></a>
+    </h4>
+    <p>
+        <%= @description0 %>
+    </p>
+    <h4>
+        <a href="<%= @url1 %>" title=""><%= @title1%></a>
+    </h4>
+    <p>
+        <%= @description1 %>
+    </p>
+    <h4>
+        <a href="<%= @url2 %>" title=""><%= @title2%></a>
+    </h4>
+    <p>
+        <%= @description2 %>
+    </p>
+    <h4>
+        <a href="<%= @url3 %>" title=""><%= @title3%></a>
+    </h4>
+    <p>
+        <%= @description3 %>
+    </p>
+    <h4>
+        <a href="<%= @url4 %>" title=""><%= @title4%></a>
+    </h4>
+    <p>
+        <%= @description4 %>
+    </p>                         
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

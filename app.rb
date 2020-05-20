@@ -28,27 +28,27 @@ get "/" do
   # make the call
   @location = location
   
-  @current_temp = forecast["current"]["temp"]
+  @current_temp = forecast["current"]["temp"].round
   @current_description = forecast["current"]["weather"][0]["description"]
 
-  @today_high = forecast ["daily"][0]["temp"]["max"]  
-  @today_low = forecast ["daily"][0]["temp"]["min"]
+  @today_high = forecast ["daily"][0]["temp"]["max"].round  
+  @today_low = forecast ["daily"][0]["temp"]["min"].round
   @today_description = forecast ["daily"][0]["weather"][0]["description"] 
   
-  @tomorrow_high = forecast ["daily"][1]["temp"]["max"]  
-  @tomorrow_low = forecast ["daily"][1]["temp"]["min"]
+  @tomorrow_high = forecast ["daily"][1]["temp"]["max"].round  
+  @tomorrow_low = forecast ["daily"][1]["temp"]["min"].round
   @tomorrow_description = forecast ["daily"][1]["weather"][0]["description"]
 
-  @day2_high = forecast ["daily"][2]["temp"]["max"]  
-  @day2_low = forecast ["daily"][2]["temp"]["min"]
+  @day2_high = forecast ["daily"][2]["temp"]["max"].round  
+  @day2_low = forecast ["daily"][2]["temp"]["min"].round
   @day2_description = forecast ["daily"][2]["weather"][0]["description"]
 
-  @day3_high = forecast ["daily"][3]["temp"]["max"]  
-  @day3_low = forecast ["daily"][3]["temp"]["min"]
+  @day3_high = forecast ["daily"][3]["temp"]["max"].round  
+  @day3_low = forecast ["daily"][3]["temp"]["min"].round
   @day3_description = forecast ["daily"][3]["weather"][0]["description"]
 
-  @day4_high = forecast ["daily"][4]["temp"]["max"]  
-  @day4_low = forecast ["daily"][4]["temp"]["min"]
+  @day4_high = forecast ["daily"][4]["temp"]["max"].round  
+  @day4_low = forecast ["daily"][4]["temp"]["min"].round
   @day4_description = forecast ["daily"][4]["weather"][0]["description"]
 
   ### Get the news 

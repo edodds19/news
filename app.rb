@@ -16,7 +16,6 @@ get "/" do
   units = "imperial" # or metric, whatever you like
   key = "9db3894e9258363098180a46b9f90c73" # replace this with your real OpenWeather API key
 
-
     weather_url = "https://api.openweathermap.org/data/2.5/onecall?lat=42.0574063&lon=-87.6722787&units=imperial&appid=9db3894e9258363098180a46b9f90c73"
     forecast = HTTParty.get(weather_url).parsed_response.to_hash
 
@@ -52,7 +51,7 @@ get "/" do
   @day4_low = forecast ["daily"][4]["temp"]["min"]
   @day4_description = forecast ["daily"][4]["weather"][0]["description"]
 
-  ### Get the news of the day
+  ### Get the news
   
   @title0 = news ["articles"][0]["title"]
   @url0 = news ["articles"][0]["url"]

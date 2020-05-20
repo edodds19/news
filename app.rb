@@ -51,7 +51,7 @@ get "/" do
   @day4_low = forecast ["daily"][4]["temp"]["min"]
   @day4_description = forecast ["daily"][4]["weather"][0]["description"]
 
-  ### Get the news
+  ### Get the news 
   
   @title0 = news ["articles"][0]["title"]
   @url0 = news ["articles"][0]["url"]

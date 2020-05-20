@@ -26,11 +26,12 @@ h4 {
 }
 
 .jumbotron {
+    background-image: url(kgh-1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: black;
-    text-shadow: 1px 1px 1px white;  
+    color: white;
+    text-shadow: 5px 5px 5px black;  
 }
 
 footer {

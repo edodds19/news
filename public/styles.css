@@ -1,0 +1,15 @@
+
+body {
+  font-family: 'Questrial', sans-serif;
+  margin: 0px;
+  text-align: left;
+}
+
+h1, h2 {
+  font-family: 'Girassol', cursive;
+}
+
+h3 {
+  font-family: 'Anton', sans-serif;
+  font-weight: bold;
+}

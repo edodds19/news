@@ -55,7 +55,9 @@ get "/" do
   
   @title0 = news ["articles"][0]["title"]
   @url0 = news ["articles"][0]["url"]
+  @source0 = news ["articles"][0]["source"]["name"]
   @description0 = news ["articles"][0]["description"]
+  @photo0 = news ["articles"][0]["urlToImage"]
 
   @title1 = news ["articles"][1]["title"]
   @url1 = news ["articles"][1]["url"]
